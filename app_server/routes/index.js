@@ -5,4 +5,35 @@ const ctrlMain = require('../controllers/main');
 /* GET home page. */
 router.get('/', ctrlMain.index);
 
+
+/* GET meals page. */
+router.get('/meals', function(req, res, next) {
+  res.render('meals', { title: 'Travlr Getaways - Meals', current_meals: true });
+});
+
+// GET rooms page
+router.get('/rooms', function(req, res, next) {
+  res.render('rooms', { title: 'Travlr Getaways - Rooms', current_rooms: true });
+});
+
+// // Get travel page
+// router.get('/travel', function(req, res, next) {
+//   res.render('travel', { title: 'Travlr Getaways - Travel', current_travel: true });
+// });
+
+// Get contact page
+router.get('/contact', function(req, res, next) {
+  res.render('contact', { title: 'Travlr Getaways - Contact', current_contact: true });
+});
+
+// Get about page
+router.get('/about', function(req, res, next) {
+  res.render('about', { title: 'Travlr Getaways - About', current_about: true });
+});
+
+// GET news page
+router.get('/news', function(req, res, next) {
+  res.render('news', { title: 'Travlr Getaways - News', current_news: true });
+});
+
 module.exports = router;
